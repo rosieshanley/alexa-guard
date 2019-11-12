@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import axios from "axios";
+// import time from "dayjs";
+// import audioFile from "./assets/audio-file.png";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const events = axios
+    .get("https://wqjiv6ktei.execute-api.us-west-2.amazonaws.com/api/", {
+      "Content-Type": "application/json"
+    })
+    .then(function(response) {
+      // handle success
+      console.log(response);
+      return response;
+    })
+    .catch(function(error) {
+      // handle error
+      console.log(error);
+      return error;
+    });
+  console.log(events);
+
+  // const createEventTile = event => (
+  //   <>
+  //     <img src={audioFile} className="App-logo" alt="audio file placeholder" />
+  //     <div>Gunshot Detected in Rm 201.B</div>
+  //     <div>{event[1].stringValue}</div>
+  //   </>
+  // );
+
+  // const eventTiles = events.map(event => createEventTile(event));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>ALEXA CLASSROOM GUARD</div>
+      {/* {eventTiles} */}
     </div>
   );
-}
+};
 
 export default App;
