@@ -9,6 +9,8 @@
 }
 
 .app {
+  height: 100vh;
+  padding: 20px;
   font-family: "Ember Bold";
   background-color: #314459;
   font-size: 10px;
@@ -20,12 +22,18 @@
   color: white;
 }
 
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Ember";
+  margin-bottom: 5em;
+}
+
 .event-tiles {
   display: flex;
   align-items: center;
-}
-
-.tile {
 }
 
 .tile-image {
@@ -33,7 +41,7 @@
 }
 
 .tile-text {
-  font-size: 2em;
+  font-size: 2.1em;
   line-height: 1.5em;
 }
 
@@ -44,5 +52,5 @@
 }
 
 .logo {
-  height: 20px;
+  height: 2.5em;
 }

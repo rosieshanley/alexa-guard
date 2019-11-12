@@ -50,8 +50,10 @@ const App = () => {
 
   return (
     <div className="app">
-      <div>ALEXA CLASSROOM GUARD</div>
-      <img src={amazonLogo} className="logo" alt="amazon logo" />
+      <div className="header-content">
+        <div className="title">ALEXA CLASSROOM GUARD</div>
+        <img src={amazonLogo} className="logo" alt="amazon logo" />
+      </div>
       <div className="event-tiles">
         <Grid container spacing={3} className="event-tiles">
           {events ? eventTiles : "Loading Events..."}
