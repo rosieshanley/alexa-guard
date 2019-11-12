@@ -9,16 +9,12 @@
 }
 
 .app {
-  height: 100vh;
-  padding: 20px;
+  padding: 20px 80px;
+  box-sizing: border-box;
   font-family: "Ember Bold";
   background-color: #314459;
   font-size: 10px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   color: white;
 }
 
@@ -28,12 +24,28 @@
   justify-content: space-between;
   align-items: center;
   font-family: "Ember";
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 .event-tiles {
   display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: 500px;
+}
+
+.audio-player {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.loading-text {
+  font-size: 2em;
+}
+
+.title {
+  font-size: 2em;
+  max-width: 400px;
 }
 
 .tile-image {
@@ -41,8 +53,20 @@
 }
 
 .tile-text {
-  font-size: 2.1em;
+  font-size: 2em;
   line-height: 1.5em;
+}
+
+@media screen and (min-width: 1280px) {
+  .tile-text {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .tile-text {
+    font-size: 1.5em;
+  }
 }
 
 .verify-link {
