@@ -1,19 +1,48 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Ember";
+  src: url("typefaces/ember/AmazonEmber_Rg.ttf");
+}
+
+@font-face {
+  font-family: "Ember Bold";
+  src: url("typefaces/ember/AmazonEmber_Bd.ttf");
+}
+
+.app {
+  font-family: "Ember Bold";
   background-color: #314459;
+  font-size: 10px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-logo {
-  height: 40vmin;
+.event-tiles {
+  display: flex;
+  align-items: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.tile {
+}
+
+.tile-image {
+  max-width: 100%;
+}
+
+.tile-text {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+.verify-link {
+  font-family: "Ember";
+  color: #c1c4c8;
+  text-decoration: none;
+}
+
+.logo {
+  height: 20px;
 }
