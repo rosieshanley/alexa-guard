@@ -35,7 +35,7 @@
 }
 
 .audio-player {
-  margin: 1em 0;
+  margin: 0.8em 0 0.6em;
   width: 100%;
 }
 
@@ -59,7 +59,7 @@
 
 @media screen and (min-width: 1280px) {
   .tile-text {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 }
 

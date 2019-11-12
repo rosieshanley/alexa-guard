@@ -62,7 +62,7 @@ const App = () => {
         <img src={amazonLogo} className="logo" alt="amazon logo" />
       </div>
       <div className="event-tiles">
-        <Grid container spacing={5} className="event-tiles">
+        <Grid container spacing={3} className="event-tiles">
           {events ? (
             eventTiles
           ) : (
