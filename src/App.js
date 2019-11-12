@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
 import Grid from "@material-ui/core/Grid";
 import amazonLogo from "./assets/amazon.png";
 import audioFile from "./assets/audio-file.png";
 import "./App.css";
+
+dayjs.extend(utc);
 
 const App = () => {
   const [events, setEvents] = useState();
@@ -22,7 +25,11 @@ const App = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const formatDatetime = dt => dayjs(dt).format("ddd, MMM DD h:mm A");
+  const formatDatetime = dt =>
+    dayjs
+      .utc(dt)
+      .local()
+      .format("ddd, MMM DD h:mm A");
 
   const createEventTile = event => (
     <Grid
@@ -40,7 +47,7 @@ const App = () => {
       />
       <div className="tile-text">
         <audio controls className="audio-player">
-          <source src={event[1].stringValue} type="audio/wav" />
+          <source src={event[5].stringValue} type="audio/wav" />
           Your browser does not support the audio element.
         </audio>
         <div>Gunshot Detected at King Street Ballroom</div>
